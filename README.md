@@ -1,0 +1,2 @@
+# EjercicioCondicionales2-CSharp
+Se requiere calcular el salario de un empleado basados en las horas trabajadas y el valor de cada hora. Tenga en cuenta que si el salario base calculado es superior a 1000000 entonces deberá descontar a ese salario la salud correspondiente al 4%. De lo contrario, deberá incrementarle a ese salario el 2%. Tenga presente mostrar el salario base, el descuento de salud, el incremento y el salario final.
