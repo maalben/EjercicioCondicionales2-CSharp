@@ -31,19 +31,56 @@ namespace EjercicioCondicionales2
 
             salarioBase = horasTrabajadas * valorHora;
 
-            if (salarioBase > 1000000) {
-                salud = salarioBase * 0.04;
-                incremento = 0;
-            } else {
-                salud = 0;
-                incremento = salarioBase * 0.02;
-            }
-            salarioAPagar = salarioBase - salud + incremento;
+            switch (cmbempleadoadministrativo.SelectedItem) {
+                
+                case "NO":
+                    if (salarioBase > 1000000)
+                    {
+                        salud = salarioBase * 0.04;
+                        incremento = 0;
+                    }
+                    else
+                    {
+                        salud = 0;
+                        incremento = salarioBase * 0.02;
+                    }
 
-            lblsalariobase.Text = Convert.ToString("$"+String.Format("{0:n0}", salarioBase));
-            lblpagosalud.Text = Convert.ToString("$" + String.Format("{0:n0}", salud));
-            lblincremento.Text = Convert.ToString("$" + String.Format("{0:n0}", incremento));
-            lblsalarioapagar.Text = Convert.ToString("$" + String.Format("{0:n0}", salarioAPagar));
+                    salarioAPagar = salarioBase - salud + incremento;
+                    lblsalariobase.Text = Convert.ToString("$" + String.Format("{0:n0}", salarioBase));
+                    lblpagosalud.Text = Convert.ToString("$" + String.Format("{0:n0}", salud));
+                    lblincremento.Text = Convert.ToString("$" + String.Format("{0:n0}", incremento));
+                    lblsalarioapagar.Text = Convert.ToString("$" + String.Format("{0:n0}", salarioAPagar));
+
+
+                    break;
+
+                case "SI":
+
+                    if (salarioBase > 1000000)
+                    {
+                        salud = salarioBase * 0.08;
+                        incremento = 0;
+                    }
+                    else
+                    {
+                        salud = 0;
+                        incremento = salarioBase * 0.01;
+                    }
+
+                   
+
+                    salarioAPagar = salarioBase - salud + incremento;
+                    lblsalariobase.Text = Convert.ToString("$" + String.Format("{0:n0}", salarioBase));
+                    lblpagosalud.Text = Convert.ToString("$" + String.Format("{0:n0}", salud));
+                    lblincremento.Text = Convert.ToString("$" + String.Format("{0:n0}", incremento));
+                    lblsalarioapagar.Text = Convert.ToString("$" + String.Format("{0:n0}", salarioAPagar));
+                    break;
+            }
+
+
+
+
+
 
             gbresumenpago.Visible = true;
 
@@ -55,6 +92,11 @@ namespace EjercicioCondicionales2
             txtvalorhora.Text = String.Empty;
             gbresumenpago.Visible = false;
             txthorastrabajadas.Focus();
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+            cmbempleadoadministrativo.SelectedIndex = 0;
         }
     }
 }

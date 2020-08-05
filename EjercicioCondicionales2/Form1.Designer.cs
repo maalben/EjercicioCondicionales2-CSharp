@@ -44,6 +44,8 @@
             this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.btnlimpiarcampos = new System.Windows.Forms.Button();
+            this.cmbempleadoadministrativo = new System.Windows.Forms.ComboBox();
+            this.label8 = new System.Windows.Forms.Label();
             this.gbresumenpago.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -214,11 +216,35 @@
             this.btnlimpiarcampos.UseVisualStyleBackColor = true;
             this.btnlimpiarcampos.Click += new System.EventHandler(this.btnlimpiarcampos_Click);
             // 
+            // cmbempleadoadministrativo
+            // 
+            this.cmbempleadoadministrativo.FormattingEnabled = true;
+            this.cmbempleadoadministrativo.ItemHeight = 13;
+            this.cmbempleadoadministrativo.Items.AddRange(new object[] {
+            "NO",
+            "SI"});
+            this.cmbempleadoadministrativo.Location = new System.Drawing.Point(41, 279);
+            this.cmbempleadoadministrativo.Name = "cmbempleadoadministrativo";
+            this.cmbempleadoadministrativo.Size = new System.Drawing.Size(121, 21);
+            this.cmbempleadoadministrativo.TabIndex = 8;
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Arial", 16F);
+            this.label8.Location = new System.Drawing.Point(36, 250);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(268, 25);
+            this.label8.TabIndex = 9;
+            this.label8.Text = "Empleado administrativo?:";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 496);
+            this.Controls.Add(this.label8);
+            this.Controls.Add(this.cmbempleadoadministrativo);
             this.Controls.Add(this.btnlimpiarcampos);
             this.Controls.Add(this.gbresumenpago);
             this.Controls.Add(this.btncalcular);
@@ -229,6 +255,7 @@
             this.Controls.Add(this.label1);
             this.Name = "Form1";
             this.Text = "Calculadora de Salarios";
+            this.Load += new System.EventHandler(this.Form1_Load);
             this.gbresumenpago.ResumeLayout(false);
             this.gbresumenpago.PerformLayout();
             this.ResumeLayout(false);
@@ -254,6 +281,8 @@
         private System.Windows.Forms.Label lblpagosalud;
         private System.Windows.Forms.Label lblsalariobase;
         private System.Windows.Forms.Button btnlimpiarcampos;
+        private System.Windows.Forms.ComboBox cmbempleadoadministrativo;
+        private System.Windows.Forms.Label label8;
     }
 }
 
