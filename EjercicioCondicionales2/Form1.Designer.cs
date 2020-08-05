@@ -43,6 +43,7 @@
             this.label4 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
+            this.btnlimpiarcampos = new System.Windows.Forms.Button();
             this.gbresumenpago.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -97,7 +98,7 @@
             this.btncalcular.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
             this.btncalcular.Location = new System.Drawing.Point(465, 250);
             this.btncalcular.Name = "btncalcular";
-            this.btncalcular.Size = new System.Drawing.Size(163, 47);
+            this.btncalcular.Size = new System.Drawing.Size(119, 47);
             this.btncalcular.TabIndex = 5;
             this.btncalcular.Text = "Calcular";
             this.btncalcular.UseVisualStyleBackColor = true;
@@ -202,11 +203,23 @@
             this.label5.TabIndex = 8;
             this.label5.Text = "Pago salud:";
             // 
+            // btnlimpiarcampos
+            // 
+            this.btnlimpiarcampos.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnlimpiarcampos.Location = new System.Drawing.Point(631, 250);
+            this.btnlimpiarcampos.Name = "btnlimpiarcampos";
+            this.btnlimpiarcampos.Size = new System.Drawing.Size(119, 74);
+            this.btnlimpiarcampos.TabIndex = 7;
+            this.btnlimpiarcampos.Text = "Limpiar campos";
+            this.btnlimpiarcampos.UseVisualStyleBackColor = true;
+            this.btnlimpiarcampos.Click += new System.EventHandler(this.btnlimpiarcampos_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 496);
+            this.Controls.Add(this.btnlimpiarcampos);
             this.Controls.Add(this.gbresumenpago);
             this.Controls.Add(this.btncalcular);
             this.Controls.Add(this.txtvalorhora);
@@ -240,6 +253,7 @@
         private System.Windows.Forms.Label lblincremento;
         private System.Windows.Forms.Label lblpagosalud;
         private System.Windows.Forms.Label lblsalariobase;
+        private System.Windows.Forms.Button btnlimpiarcampos;
     }
 }
 

@@ -48,5 +48,13 @@ namespace EjercicioCondicionales2
             gbresumenpago.Visible = true;
 
         }
+
+        private void btnlimpiarcampos_Click(object sender, EventArgs e)
+        {
+            txthorastrabajadas.Text = String.Empty;
+            txtvalorhora.Text = String.Empty;
+            gbresumenpago.Visible = false;
+            txthorastrabajadas.Focus();
+        }
     }
 }
